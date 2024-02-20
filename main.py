@@ -1,9 +1,12 @@
 from fastapi import FastAPI
 
+import random
+
 app = FastAPI()
 
 ##fill out to add data
 @app.get("/")
-async def root():
-    return {"message: ": "Hello World"}
-
+async def update():
+    return {"Hyperloop RPi": "Hello There.",
+            "Tempurature": random.randint(0,100)
+            }
