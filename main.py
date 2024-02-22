@@ -8,5 +8,5 @@ app = FastAPI()
 @app.get("/")
 async def update():
     return {"Hyperloop RPi": "Hello There.",
-            "Tempurature": random.randint(0,100)
+            "tempurature": random.randint(0,100)
             }
