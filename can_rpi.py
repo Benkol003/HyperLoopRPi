@@ -17,9 +17,8 @@ os.system('sudo ifconfig can0 up')
 can0 = can.interface.Bus(channel = 'can0', bustype = 'socketcan')# socketcan_native
 while run:
     msg = can0.recv(5.0)
-    print(msg)
-    if msg is None:
-        print('Timeout occurred, no message.')
+    if msg is not None:
+        print(msg)
 
 
 os.system('sudo ifconfig can0 down')
