@@ -18,4 +18,4 @@ async def update():
 
 #STM32 Nucleo F446RE boards: CAN baud rate is recommended 875 KBits for a prescaler of 16, (or 999KBits for prescaler 14).
 
-uvicorn.run(app,host="hyperloop",port=8000)
+uvicorn.run(app,host="localhost",port=8000)
